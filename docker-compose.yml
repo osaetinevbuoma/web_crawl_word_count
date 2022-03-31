@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+    web_crawl_word_count:
+        build: .
+        container_name: web-crawl-word-count
+        ports:
+            - "5000:5000"

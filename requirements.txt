@@ -1,0 +1,5 @@
+beautifulsoup4
+coverage==6.3.2
+Flask
+lxml
+pytest==7.1.1
