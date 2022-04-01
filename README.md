@@ -14,10 +14,11 @@ BeautifulSoup and lxml are one of the most popular and performant Python parsing
 pulling data from HTML and XML files. BeautifulSoup's default parser is a little slow, but it allows
 leveraging other parsers. This is where lxml comes in. lxml is a high-performance, 
 production-quality HTML and XML parsing library and has the advantage of being really fast as it 
-uses *libxml2* and *libxslt* C libraries.
+uses *libxml2* and *libxslt* C libraries. These libraries are required to be able to crawl the 
+provided URL to get and count the words.
 + [**Requests**](https://docs.python-requests.org/): Requests is an HTTP library for Python. The
 major reason for using the Request library is its ease of use and readability - tools for writing 
-more elegant and maintainable code.
+more elegant and maintainable code. The response from the Request library is passed to the parser.
 + [**pytest**](https://docs.pytest.org/): pytest is a framework that makes it easy to write small,
 readable test. It was chosen because of its simplicity and ability to scale to support more complex
 testing. It also works seamlessly with Flask.
