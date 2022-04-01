@@ -1,5 +1,7 @@
 beautifulsoup4
 coverage==6.3.2
 Flask
+# locust
 lxml
+requests==2.27.1
 pytest==7.1.1

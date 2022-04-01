@@ -4,8 +4,7 @@ from flask import Flask
 def create_app():
     app = Flask(__name__)
 
-    @app.route("/hello")
-    def hello():
-        return "Hello World"
+    from . import crawler
+    app.register_blueprint(crawler.blueprint)
 
     return app
