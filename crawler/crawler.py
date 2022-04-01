@@ -7,12 +7,14 @@ from crawler.custom_exceptions import UrlNotFoundException, UrlNotProvidedExcept
 
 blueprint = Blueprint('crawler', __name__, url_prefix="/")
 
+up_time = ctime()
+
 
 @blueprint.route("/health", methods=["GET"])
 def health():
     return {
         "status": "UP",
-        "message": f"alive at {ctime()}"
+        "message": f"alive since {up_time}"
     }
 
 
@@ -26,4 +28,4 @@ def count_words():
     except UrlNotFoundException as ex:
         return {"error": ex.message}, 404
     except UrlNotProvidedException as ex:
-        return {"error": ex}, 400
+        return {"error": ex.message}, 400
